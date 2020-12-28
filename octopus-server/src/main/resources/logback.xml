@@ -7,7 +7,7 @@
     <contextListener class="org.slf4j.TransmittableThreadLocalMappedDiagnosticContextListener"/>
 
     <appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/data/log-center/${app-name}/${filename}.log</file>
+        <file>/Users/weikunkun/IdeaProjects/octopus/data/log-center/${app-name}/${filename}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>/data/log-center/${app-name}/${filename}.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
