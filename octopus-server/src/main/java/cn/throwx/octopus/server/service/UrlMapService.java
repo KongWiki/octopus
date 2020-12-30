@@ -18,6 +18,7 @@ import cn.throwx.octopus.server.model.entity.UrlMap;
 import cn.throwx.octopus.server.repository.CompressionCodeDao;
 import cn.throwx.octopus.server.repository.DomainConfDao;
 import cn.throwx.octopus.server.repository.UrlMapDao;
+import java.util.PriorityQueue;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -194,6 +195,7 @@ public class UrlMapService implements BeanFactoryAware {
      */
     private void generateBatchCompressionCodes() {
         for (int i = 0; i < compressCodeBatch; i++) {
+            // 雪花算法生成压缩码
             long sequence = sequenceGenerator.generate();
             CompressionCode compressionCode = new CompressionCode();
             compressionCode.setSequenceValue(String.valueOf(sequence));

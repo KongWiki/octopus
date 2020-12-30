@@ -29,7 +29,7 @@ public class UrlMapServiceTest {
         String domain = "localhost:8088";
         UrlMap urlMap = new UrlMap();
         urlMap.setUrlStatus(UrlMapStatus.AVAILABLE.getValue());
-        urlMap.setLongUrl("https://kongwiki.me/2020/11/02/if-else-code-optimization/");
+        urlMap.setLongUrl("https://kongwiki.me/2020/01/01/2020%E5%B9%B4%E4%B9%A6%E5%8D%95%E3%80%90%E5%B9%B4%E6%B1%87%E6%80%BB%E3%80%91/");
         urlMap.setDescription("测试短链");
         String url = urlMapService.createUrlMap(domain, urlMap);
         log.info("生成的短链:{}", url);
